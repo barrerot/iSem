@@ -17,6 +17,15 @@
 			      center: new google.maps.LatLng(37.389493, -5.994823),
 			      mapTypeId: google.maps.MapTypeId.ROADMAP
 			   });
+
+			   var HiniestaLat = new google.maps.LatLng(37.394565,-5.995198);
+
+			   var HiniestaMrk = new google.maps.Marker({
+				    position: HiniestaLat,
+				    title:"La Hiniesta"
+				});
+
+			   HiniestaMrk.setMap(map);
 			});
 		</script>
 		<style type="text/css">
