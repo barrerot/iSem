@@ -5,40 +5,45 @@
 	    <title>iSem - Semana Santa Sevilla 2014</title>
 	    <meta charset="utf-8">
 		<link rel="stylesheet" href="js/jquery.mobile-1.3.2.css">
+		<link rel="stylesheet" href="js/jquery.mobile.iscrollview.css">
+		<link rel="stylesheet" href="js/jquery.mobile.iscrollview-pull.css">
+
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 		<script src="js/jquery.js"></script>
+		<script src="js/iscroll.js"></script>
 		<script src="js/jquery.mobile-1.3.2.min.js"></script>
+		<script src="js/jquery.mobile.iscrollview.js"></script>
 		<script type="text/javascript">
 			$(document).on('pageinit', '#index',function(e,data){    
 
 				var hermandades = [
-					['Cruz de Guía - La Borriquita','blue_MarkerA.png',37.388003,-5.993222],
-					['Primer Paso - La Borriquita','blue_MarkerB.png',37.387468,-5.993131],
-					['Cruz de Guía - Jesús Despojado','brown_MarkerA.png',37.384276,-5.994029],
-					['Primer Paso - Jesús Despojado','brown_MarkerB.png',37.385137,-5.994201],
-					['Segundo Paso - Jesús Despojado','brown_MarkerC.png',37.385188,-5.992366],
-					['Cruz de Guía - La Paz','darkgreen_MarkerA.png',37.384881,-5.992227],
-					['Primer Paso - La Paz','darkgreen_MarkerB.png',37.385853,-5.992248],
-					['Segundo Paso - La Paz','darkgreen_MarkerC.png',37.385947,-5.993214],
-					['Cruz de Guía - La Cena','green_MarkerA.png',37.385418,-5.993986],
-					['Primer Paso - La Cena','green_MarkerB.png',37.387507,-5.994244],
-					['Segundo Paso - La Cena','green_MarkerC.png',37.389084,-5.994147],
-					['Tercer Paso - La Cena','green_MarkerD.png',37.392348,-5.994877],
-					['Cruz de Guía - La Hiniesta','orange_MarkerA.png',37.392724,-5.994941],
-					['Primer Paso - La Hiniesta','orange_MarkerB.png',37.393158,-5.995649],
-					['Segundo Paso - La Hiniesta','orange_MarkerC.png',37.394467,-5.995241],
-					['Cruz de Guía - San Roque','paleblue_MarkerA.png',37.393557,-5.994506],
-					['Primer Paso - San Roque','paleblue_MarkerB.png',37.393416,-5.993721],
-					['Segundo Paso - San Roque','paleblue_MarkerC.png',37.392781,-5.992691],
-					['Cruz de Guía - La Estrella','pink_MarkerA.png',37.389672,-5.999093],
-					['Primer Paso - La Estrella','pink_MarkerB.png',37.388069,-6.000745],
-					['Segundo Paso - La Estrella','pink_MarkerC.png',37.385154,-6.003417],
-					['Cruz de Guía - La Amargura','purple_MarkerA.png',37.39541,-5.991234],
-					['Primer Paso - La Amargura','purple_MarkerB.png',37.39541,-5.991234],
-					['Segundo Paso - La Amargura','purple_MarkerC.png',37.39541,-5.991234],
-					['Cruz de Guía - El Amor','red_MarkerA.png',37.39009,-5.992618],
-					['Primer Paso - El Amor','red_MarkerB.png',37.39009,-5.992618],
-					['Segundo Paso - El Amor','red_MarkerC.png',37.39009,-5.992618]
+					['Cruz de Guía - La Borriquita','blue_MarkerA.png',37.388003,-5.993222,'01_eslaborriquita.png'],
+					['Primer Paso - La Borriquita','blue_MarkerB.png',37.387468,-5.993131,'01_eslaborriquita.png'],
+					['Cruz de Guía - Jesús Despojado','brown_MarkerA.png',37.384276,-5.994029,'02_esjesusdespojado.png'],
+					['Primer Paso - Jesús Despojado','brown_MarkerB.png',37.385137,-5.994201,'02_esjesusdespojado.png'],
+					['Segundo Paso - Jesús Despojado','brown_MarkerC.png',37.385188,-5.992366,'02_esjesusdespojado.png'],
+					['Cruz de Guía - La Paz','darkgreen_MarkerA.png',37.384881,-5.992227,'03_eslapaz.png'],
+					['Primer Paso - La Paz','darkgreen_MarkerB.png',37.385853,-5.992248,'03_eslapaz.png'],
+					['Segundo Paso - La Paz','darkgreen_MarkerC.png',37.385947,-5.993214,'03_eslapaz.png'],
+					['Cruz de Guía - La Cena','green_MarkerA.png',37.385418,-5.993986,'04_eslacena.png'],
+					['Primer Paso - La Cena','green_MarkerB.png',37.387507,-5.994244,'04_eslacena.png'],
+					['Segundo Paso - La Cena','green_MarkerC.png',37.389084,-5.994147,'04_eslacena.png'],
+					['Tercer Paso - La Cena','green_MarkerD.png',37.392348,-5.994877,'04_eslacena.png'],
+					['Cruz de Guía - La Hiniesta','orange_MarkerA.png',37.392724,-5.994941,'05_eslahiniesta.png'],
+					['Primer Paso - La Hiniesta','orange_MarkerB.png',37.393158,-5.995649,'05_eslahiniesta.png'],
+					['Segundo Paso - La Hiniesta','orange_MarkerC.png',37.394467,-5.995241,'05_eslahiniesta.png'],
+					['Cruz de Guía - San Roque','paleblue_MarkerA.png',37.393557,-5.994506,'06_essanroque.png'],
+					['Primer Paso - San Roque','paleblue_MarkerB.png',37.393416,-5.993721,'06_essanroque.png'],
+					['Segundo Paso - San Roque','paleblue_MarkerC.png',37.392781,-5.992691,'06_essanroque.png'],
+					['Cruz de Guía - La Estrella','pink_MarkerA.png',37.389672,-5.999093,'07_eslaestrella.png'],
+					['Primer Paso - La Estrella','pink_MarkerB.png',37.388069,-6.000745,'07_eslaestrella.png'],
+					['Segundo Paso - La Estrella','pink_MarkerC.png',37.385154,-6.003417,'07_eslaestrella.png'],
+					['Cruz de Guía - La Amargura','purple_MarkerA.png',37.39541,-5.991234,'08_eslaamargura.png'],
+					['Primer Paso - La Amargura','purple_MarkerB.png',37.39541,-5.991234,'08_eslaamargura.png'],
+					['Segundo Paso - La Amargura','purple_MarkerC.png',37.39541,-5.991234,'08_eslaamargura.png'],
+					['Cruz de Guía - El Amor','red_MarkerA.png',37.39009,-5.992618,'09_eselamor.png'],
+					['Primer Paso - El Amor','red_MarkerB.png',37.39009,-5.992618,'09_eselamor.png'],
+					['Segundo Paso - El Amor','red_MarkerC.png',37.39009,-5.992618,'09_eselamor.png']
 				];	
 			   var minZoomLevel = 16;
 
@@ -55,11 +60,8 @@
 			   		var item = hermandades[i];
 			   		var lat_aux = new google.maps.LatLng(item[2],item[3]);
 			   		var image_aux = new google.maps.MarkerImage('assets/markers/'+item[1],
-				      // This marker is 20 pixels wide by 32 pixels tall.
 				      new google.maps.Size(20, 34),
-				      // The origin for this image is 0,0.
 				      new google.maps.Point(0,0),
-				      // The anchor for this image is the base of the flagpole at 0,32.
 				      new google.maps.Point(0, 34));
 
 			   		var marker_aux = new google.maps.Marker({
@@ -70,20 +72,37 @@
 
 				   	marker_aux.setMap(map);
 
-				   	var yourLocation = new google.maps.LatLng(item[2],item[3]);
-					geocoder.geocode({ 'latLng': yourLocation },processGeocoder);
 			   };
 
-				function processGeocoder(results, status){
-					if (status == google.maps.GeocoderStatus.OK) {
-						if (results[0]) {
-							alert(results[0].formatted_address);
-						} else {
-							alert('Google no retorno resultado alguno.');
-						}
-					} else {
-						alert("Geocoding fallo debido a : " + status);
-					}
+			   	var j = 0;
+
+			   	for(j=0; j<hermandades.length; j++){
+			   		var item = hermandades[j];
+			   		var yourLocation = new google.maps.LatLng(item[2],item[3]);
+					Geocoder(yourLocation,j);
+			   	}
+
+				function Geocoder(location_aux,j){
+					geocoder.geocode({
+				        'latLng': location_aux
+				    }, function(results, status) {
+				        if (status === google.maps.GeocoderStatus.OK) {
+				            //alert(results[0].formatted_address);
+				            var aux = results[0].formatted_address;
+				            console.log(j);
+				            hermandad_title = (hermandades[j])[0];
+				            hermandad_street = aux;
+				            hermandad_escudo = (hermandades[j])[4];
+				            $("#last_position_hermandades ul").prepend("<li><img src='assets/escudos/"+hermandad_escudo+"'><h3>"+hermandad_title+"</h3><p>"+hermandad_street+"</p></li>").slideDown("slow").listview('refresh');;
+				        } else if (status === google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {    
+				            setTimeout(function() {
+				                Geocoder(location_aux,j);
+				            }, 1000);
+				        } else {
+				            alert("Geocode was not successful for the following reason:" 
+				                  + status);
+				        }
+				    });
 				}
 
 			});
@@ -100,31 +119,16 @@
 			}
 		</style>
     </head>
-	<body>
+	<body scroll="no">
 		<div data-role="page" id="index">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed">
 				<h1> Inicio </h1>
-			</div>
-			<div data-role="content" id="content">
-	            <div id="map_canvas" style="height:200px"></div>
+				<div data-role="content" id="content">
+		            <div id="map_canvas" style="height:200px"></div>
+		        </div>
 	        </div>
-	        <div data-role="content" id="lastcheckin" style="clear:right;">
+	        <div data-role="content" id="last_position_hermandades" style="clear:right;" data-iscroll>
 		        <ul data-role="listview">
-				    <li><a href="#">
-        				<img src="assets/icons/carlos.png">
-					    <h2>Carlos López</h2>
-					    <p>Cruz de Guía de la Amargura</p></a>
-				    </li>
-				    <li><a href="#">
-				        <img src="assets/icons/carlota.png">
-					    <h2>Carlota Furgot</h2>
-					    <p>Paso Palio de la Estrella</p></a>
-				    </li>
-				    <li><a href="#">
-				        <img src="assets/icons/manuel.png">
-					    <h2>Manuel Soyo</h2>
-					    <p>Paso Cristo de la Hiniesta</p></a>
-				    </li>
 				</ul>
 			</div>
 		</div>
