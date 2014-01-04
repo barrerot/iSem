@@ -116,6 +116,14 @@
 			    left : 0 !important;     
 			    */clear: float;
 			}
+
+		    .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+		    .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }
+		    #enciclopedia .ui-icon { background:  url(assets/icons/enciclopedia.png) 50% 50% no-repeat; background-size: 18px 26px; }
+		    #mapa .ui-icon { background:  url(assets/icons/mapa.png) 50% 50% no-repeat; background-size: 26px 21px;  }
+		    #check .ui-icon { background:  url(assets/icons/check.png) 50% 50% no-repeat;  background-size: 20px 20px; }
+		    #perfil .ui-icon { background:  url(assets/icons/perfil.png) 50% 50% no-repeat;  background-size: 24px 21px; }
+		    #info .ui-icon { background:  url(assets/icons/info.png) 50% 50% no-repeat;  background-size: 28px 28px; }
 		</style>
     </head>
 	<body scroll="no">
@@ -131,13 +139,13 @@
 				</ul>
 			</div>
 			<div data-role="footer" data-id="foo1" data-position="fixed">
-				<div data-role="navbar">
+				<div data-role="navbar" class="nav-glyphish-example">
 					<ul>
-						<li><a href="a.html">Info</a></li>
-						<li><a href="b.html">Friends</a></li>
-						<li><a href="c.html">Albums</a></li>
-						<li><a href="d.html">Emails</a></li>
-						<li><a href="e.html">ddede</a></li>
+						<li><a id="enciclopedia" href="#" data-theme="c" data-icon="custom">Saber</a></li>
+						<li><a id="mapa" href="#" data-theme="c" data-icon="custom">Mapa</a></li>
+						<li><a id="check" href="#" data-theme="c" data-icon="custom">Check!</a></li>
+						<li><a id="perfil" href="#" data-theme="c" data-icon="custom">Mi perfil</a></li>
+						<li><a id="info" href="#" data-theme="c" data-icon="custom">Info</a></li>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
